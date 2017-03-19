@@ -6,7 +6,130 @@
 </head>
 <body>
 <main>
-    <h1>History of the Web</h1>
+    <article>
+    <h1>How the Web Works</h1>
+    <h3>How does the Internet work</h3>
+        <p>As we know the Internet is the backbone of the Web
+            and it is a large network where computers are connected
+            and able to communicate. In the history of the Internet,
+            it started in 1960s were in it was used in the US army and
+            in the 1980s it was also available to be used in public infrastructures.</p>
+        <h3>Why is the Internet called ‘a network of networks’?</h3>
+        <p>If you wanted to connect your computer to another computer you must first link them, either physically or wirelessly.
+            A network is not just limited to two computers that are connected instead a network consists of other networks.
+            This means that you can be able to connect multiple computers using cables.
+        </p>
+        <p>
+            It will be cumbersome to connect and wire let say 10 computers, this will produce more than 40 cables.
+            But what if you connect a computer to a device which can connect other computers. This device is called a router,
+            its job is to make sure that messages within the network is being sent correctly and delivered at proper destination.
+            When you have a router that has 10 pots it will be easily for you to setup your network because you will only need a
+            single cable for each node or computer.
+        </p>
+        <h3>Is the Internet and the web the same thing?</h3>
+        <p>We now know that the Internet a large network and it is an infrastructure
+            while the web is service that users can use to connect and communicate to other users that are also connected in the web.</p>
+        <h3>Webpage, Website, Web Server, Search engine</h3>
+        <dl>
+            <dt>webpage</dt>
+            <dd>A webpage is a document which is displayed in a web browser like Google Chrome, Firefox, Opera or Edge. A webpage is written in a
+                markup language called HTML. Web pages can be access using addresses which you can place in your web browsers address bar.</dd>
+            <dt>website</dt>
+            <dd>This is simply a page which contains webpages. These webpages are then linked to each other using hyperlinks which allows users
+                to move from one page to another.</dd>
+            <dt>web server</dt>
+            <dd>A web server is a node or a computer that can host multiple websites. A web server sends web pages to users who access its website.
+                All files that contains the content of a website is inside a webserver.</dd>
+            <dt>Search Engine</dt>
+            <dd>A search engine is a website used to browse and search for webpages and other websites. Some examples are Bing, Yahoo, Google and DuckDuckGo.
+                These search engines enable users to query in the search engine and able to look contents in the web.</dd>
+        </dl>
+
+        <h3>What is a URL?</h3>
+        <p>
+            Uniform Resource Locator (URL). URL contains unique name and it is also a unique content on the web. It can contain an html document, css document,
+            videos, audio or even images, etc.
+        </p>
+        <p>
+            A URL has different parts:
+        </p>
+
+        <figure>
+            <img src="images/mdn-url-protocol@x2.png" alt="protocol image">
+            <figcaption>The protocol tells what kind of protocol must the browser use. It can be the secured version of HTTP which
+                is HTTPS or other protocols like ftp and others.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/mdn-url-domain@x2.png" alt="domain image">
+            <figcaption>The Domain name is the address in which a web server is located. You can also use the IP address of a web
+                server to locate a website in the web.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/mdn-url-port@x2.png" alt="port image">
+            <figcaption>A port is used to access a resource on a web server. It is like a gateway where you can know where to find a 
+                certain resource.</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="images/mdn-url-path@x2.png" alt="path image">
+            <figcaption>This path is where you locate contents of a web server just like in windows explorer where path can be directories
+                and inside the directory are sub directories. This can be used to point to a specific resource in a web server.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/mdn-url-parameters@x2.png" alt="parameters image">
+            <figcaption>This values are parameters that are given to a web server where these parameters can do other thing before it can deliver 
+                a resource to a user.</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="images/mdn-url-anchor@x2.png" alt="anchor image">
+            <figcaption>An anchor represents a bookmark in a resource on a webpage. This serves as a linked to a location that is bookmarked
+                in a resource. When a bookmark is selected in a webpage it will scroll through the webpage that contains the anchor.
+                Another example is a video where you can click or point to a certain point of the video or audio.</figcaption>
+        </figure>
+
+        <h3>Absolute URL and Relative URL</h3>
+        <p>To differentiate and understand what and absolute and relative URL is examples will be provided.</p>
+        <h4>Examples of absolute URL</h4>
+        <pre><p>
+            Full URL
+            https://example.org/docs/topics
+            https://example.org/docs/topics/topic1
+            Implicit protocol
+            //example.org/docs/topics
+            Implicit domain name
+            //docs/topics
+        </p></pre>
+    <p>This shows that absolute protocol fetches its resource from the root directory. Where you must specify the location of a
+        resource which you want to access. You can also easily identify an absolute URL if it uses the “ / ” character.</p>
+
+        <h4>Examples of relative URL</h4>
+        <p>Example if this URL is entered https://example.org/docs/topics</p>
+        <p>Assuming you wanted to access a sub-resource located in /topic1/part1. You will not need to type in every directory to point to that resource.
+            Using relative URL and because the URL does not start with the “ / ” character the browser will attempt to find the resource. So what we
+            really wanted to locate is the address http://example.org/docs/topics/topic1/part1</p>
+
+        <h3>What are Domain Names?</h3>
+        <p>Domain names are human readable addresses in the web and domain names uses semantic URL in which users can easily remember a resource in the web.
+            Users can access any website using IP address of a website but this will be hard for people to remember a lot IP addresses because IP a single IP
+            address contains 32 bits for IPv4. (eg. 192.168.1.1)</p>
+        <h4>Domain name Structure</h4>
+        <figure>
+            <img src="images/mdn-url-domain@x2.png" alt="domain image">
+            <figcaption>
+                <dl>
+                    <dt>TLD (Top-Level Domain)</dt>
+                    <dd>TLD provides user information about what service does a website server (eg. .com, .org, .net, .ph, .us etc)</dd>
+                    <dt>Label (or component)</dt>
+                    <dd>This contains any letter or word and can be referred to as a Secondary-Level Domain</dd>
+                </dl>
+            </figcaption>
+        </figure>
+    </article>
+
 </main>
 </body>
 </html>
