@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="styles/bootstrap-theme.css" rel="stylesheet">
+    <link href="styles/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<main>
+<article>
+   <table class="table">
+       <caption class="h1">Request Headers</caption>
+       <thead>
+        <tr>
+            <th>Header Field Name</th>
+            <th>Protocol</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th>Reference</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr>
+       <th>Accept</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "Accept" header field can be used by user agents to specify
+               response media types that are acceptable.  Accept header fields can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an
+               in-line image.</td>
+           <td>
+               [RFC7231, Section 5.3.2]
+           </td>
+       </tr>
+
+       <tr>
+       <th>Accept Encoding</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>The "Accept-Encoding" header field can be used by user agents to
+               indicate what response content-codings(Section 3.1.2.1) are acceptable in the response. An "identity" token is used as a synonym
+               for "no encoding" in order to communicate when no encoding is
+               preferred.
+           </td>
+           <td></td>
+       </tr>
+
+       <tr>
+       <th>Accept Charset</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>The "Accept-Charset" header field can be sent by a user agent to
+               indicate what charsets are acceptable in textual response content.This field allows user agents capable of understanding more
+               comprehensive or special-purpose charsets to signal that capability to an origin server that is capable of representing information in those charsets.
+           </td>
+           <td>
+               [RFC7231, Section 5.3.4]
+               [RFC7694, Section 3]
+           </td>
+       </tr>
+
+       <tr>
+       <th>Accept Language</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "Accept-Language" header field can be used by user agents to
+               indicate the set of natural languages that are preferred in the
+               response.  Language tags are defined in Section 3.1.3.1.
+           </td>
+           <td>
+               [RFC7231, Section 5.3.5]
+           </td>
+       </tr>
+
+       <tr>
+       <th>Authorization</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "Authorization" header field allows a user agent to authenticate itself with an origin server -- usually, but not necessarily, after receiving a 401 (Unauthorized) response. Its value consists of credentials containing the authentication information of the user
+               agent for the realm of the resource being requested.
+           </td>
+           <td>
+               [RFC7235, Section 4.2]
+           </td>
+       </tr>
+
+       <tr>
+       <th>Except</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "Expect" header field in a request indicates a certain set of behaviors (expectations) that need to be supported by the server in order to properly handle this request.  The only such expectation defined by this specification is 100-continue.
+           </td>
+           <td>
+               [RFC7231, Section 5.1.1]
+           </td>
+       </tr>
+
+       <tr>
+       <th>From</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "From" header field contains an Internet email address for a
+               human user who controls the requesting user agent. The address ought to be machine-usable, as defined by "mailbox" in Section 3.4 of [RFC5322]:
+           </td>
+           <td>
+               [RFC7231, Section 5.5.1]
+           </td>
+       </tr>
+
+       <tr>
+       <th>Host</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "Host" header field in a request provides the host and port
+               information from the target URI, enabling the origin server to
+               distinguish among resources while servicing requests for multiple host names on a single IP address.
+           </td>
+           <td>
+               [RFC7230, Section 5.4]
+           </td>
+       </tr>
+
+       <tr>
+       <th>If match</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "If-None-Match" header field makes the request method conditional on a recipient cache or origin server either not having any current
+               representation of the target resource, when the field-value is "*",
+               or having a selected representation with an entity-tag that does not match any of those listed in the field-value.
+           </td>
+           <td>
+               [RFC7232, Section 3.1]
+           </td>
+       </tr>
+
+       <tr>
+       <th>If-modified since</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "If-Modified-Since" header field makes a GET or HEAD request
+               method conditional on the selected representation's modification date
+               being more recent than the date provided in the field-value.
+               Transfer of the selected representation's data is avoided if that
+               data has not changed.
+           </td>
+           <td>
+               [RFC7232, Section 3.3]
+           </td>
+       </tr>
+
+       <tr>
+       <th>If-unmodified-since</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "If-Unmodified-Since" header field makes the request method conditional on the selected representation's last modification date
+               being earlier than or equal to the date provided in the field-value. This field accomplishes the same purpose as If-Match for cases where the user agent does not have an entity-tag for the representation.
+           </td>
+           <td>
+               [RFC7232, Section 3.4]
+           </td>
+       </tr>
+
+       <tr>
+       <th>If-none match</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "If-None-Match" header field makes the request method conditional on a recipient cache or origin server either not having any current
+               representation of the target resource, when the field-value is "*",
+               or having a selected representation with an entity-tag that does not match any of those listed in the field-value.
+           </td>
+           <td>
+               [RFC7232, Section 3.2]
+           </td>
+
+       </tr>
+
+       <tr>
+       <th>If range</th>
+           <td>http</td>
+           <td>standard</td>
+           <td>
+               The "If-Range" header field allows a client to "short-circuit" the
+               second request.  Informally, its meaning is as follows: if the
+               representation is unchanged, send me the part(s) that I am requesting in Range; otherwise, send me the entire representation.
+           </td>
+           <td>
+               [RFC7233, Section 3.2]
+           </td>
+       </tr>
+
+       </tbody>
+   </table>
+</article>
+</main>
+
+</body>
+</html>
