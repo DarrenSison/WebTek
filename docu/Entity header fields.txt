@@ -1,0 +1,31 @@
+
+Entity Header Fields
+Allow 
+Allow identifies methods that can be called to a specified resource.
+
+Content-Encoding
+Content-Encoding is used to compress the resources without losing the identity of its media type. It is also used for the server for fast delivery.
+
+Content-Language
+Content-Language identifies the languages the resource is available on.
+
+Content-Length 
+Content-Length is used to specify the size of the payload.
+
+Content-Location 
+Content-Location is used to show the actual location of the resource.
+
+Content-MD5 
+Content-MD5 is a deprecated header field that can be used to check the integrity of an entity.
+
+Content-Range
+Content-Range is used to specify where in the full entity the partial entity should be applied.
+
+Content-Type 
+Content-Type specifies the MIME type of the entity.
+
+Expires
+Expires is used for controlling cache access. It specifies until what time and date the resource is considered fresh.
+
+Last-Modified
+Last-Modified shows when the resource was last changed or updated.
