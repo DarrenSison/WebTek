@@ -26,9 +26,8 @@
            <td>http</td>
            <td>standard</td>
            <td>
-               The "Accept" header field can be used by user agents to specify
-               response media types that are acceptable.  Accept header fields can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an
-               in-line image.</td>
+               The "Accept-Ranges" header field allows a server to indicate that it
+				supports range requests for the target resource.</td>
            <td>
                [RFC7231, Section 5.3.2]
            </td>
@@ -38,10 +37,9 @@
        <th>Age</th>
            <td>http</td>
            <td>standard</td>
-           <td>The "Accept-Encoding" header field can be used by user agents to
-               indicate what response content-codings(Section 3.1.2.1) are acceptable in the response. An "identity" token is used as a synonym
-               for "no encoding" in order to communicate when no encoding is
-               preferred.
+           <td>The "Age" header field conveys the sender's estimate of the amount of
+				time since the response was generated or successfully validated at
+				the origin server.
            </td>
            <td></td>
        </tr>
@@ -50,9 +48,16 @@
        <th>ETag</th>
            <td>http</td>
            <td>standard</td>
-           <td>The "Accept-Charset" header field can be sent by a user agent to
-               indicate what charsets are acceptable in textual response content.This field allows user agents capable of understanding more
-               comprehensive or special-purpose charsets to signal that capability to an origin server that is capable of representing information in those charsets.
+           <td>The "ETag" header field in a response provides the current entity-tag
+			for the selected representation, as determined at the conclusion of
+			handling the request.  An entity-tag is an opaque validator for
+			differentiating between multiple representations of the same
+			resource, regardless of whether those multiple representations are
+			due to resource state changes over time, content negotiation
+			resulting in multiple representations being valid at the same time,
+			or both.  An entity-tag consists of an opaque quoted string, possibly
+			prefixed by a weakness indicator.
+
            </td>
            <td>
                [RFC7231, Section 5.3.4]
@@ -65,9 +70,10 @@
            <td>http</td>
            <td>standard</td>
            <td>
-               The "Accept-Language" header field can be used by user agents to
-               indicate the set of natural languages that are preferred in the
-               response.  Language tags are defined in Section 3.1.3.1.
+               The "Location" header field is used in some responses to refer to a
+			specific resource in relation to the response.  The type of
+			relationship is defined by the combination of request method and
+			status code semantics.
            </td>
            <td>
                [RFC7231, Section 5.3.5]
@@ -79,8 +85,12 @@
            <td>http</td>
            <td>standard</td>
            <td>
-               The "Authorization" header field allows a user agent to authenticate itself with an origin server -- usually, but not necessarily, after receiving a 401 (Unauthorized) response. Its value consists of credentials containing the authentication information of the user
-               agent for the realm of the resource being requested.
+               The "Proxy-Authenticate" header field consists of at least one
+			challenge that indicates the authentication scheme(s) and parameters
+			applicable to the proxy for this effective request URI (Section 5.5
+			of [RFC7230]).
+
+
            </td>
            <td>
                [RFC7235, Section 4.2]
@@ -92,7 +102,8 @@
            <td>http</td>
            <td>standard</td>
            <td>
-               The "Expect" header field in a request indicates a certain set of behaviors (expectations) that need to be supported by the server in order to properly handle this request.  The only such expectation defined by this specification is 100-continue.
+				Servers send the "Retry-After" header field to indicate how long the
+user agent ought to wait before making a follow-up request. 
            </td>
            <td>
                [RFC7231, Section 5.1.1]
@@ -104,8 +115,14 @@
            <td>http</td>
            <td>standard</td>
            <td>
-               The "From" header field contains an Internet email address for a
-               human user who controls the requesting user agent. The address ought to be machine-usable, as defined by "mailbox" in Section 3.4 of [RFC5322]:
+               The "Server" header field contains information about the software
+				used by the origin server to handle the request, which is often used
+				by clients to help identify the scope of reported interoperability
+				problems, to work around or tailor requests to avoid particular
+				server limitations, and for analytics regarding server or operating
+				system use.
+
+
            </td>
            <td>
                [RFC7231, Section 5.5.1]
@@ -117,9 +134,12 @@
            <td>http</td>
            <td>standard</td>
            <td>
-               The "Host" header field in a request provides the host and port
-               information from the target URI, enabling the origin server to
-               distinguish among resources while servicing requests for multiple host names on a single IP address.
+               The "Vary" header field in a response describes what parts of a
+				request message, aside from the method, Host header field, and
+				request target, might influence the origin server's process for
+				selecting and representing this response.  The value consists of
+				either a single asterisk ("*") or a list of header field names
+				(case-insensitive).
            </td>
            <td>
                [RFC7230, Section 5.4]
@@ -131,9 +151,8 @@
            <td>http</td>
            <td>standard</td>
            <td>
-               The "If-None-Match" header field makes the request method conditional on a recipient cache or origin server either not having any current
-               representation of the target resource, when the field-value is "*",
-               or having a selected representation with an entity-tag that does not match any of those listed in the field-value.
+               The "WWW-Authenticate" header field indicates the authentication
+				scheme(s) and parameters applicable to the target resource.
            </td>
            <td>
                [RFC7232, Section 3.1]
